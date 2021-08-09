@@ -1,0 +1,123 @@
+/* Global Rules */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-size:15px;
+}
+body{
+    background-color:hsl(233, 47%, 7%);
+}
+.card{
+    width:900px;
+    display:flex;
+    justify-content: space-between;
+    position: relative;
+    top:0;
+    margin:auto;
+    transform: translatey(30%);
+    border-radius: 3px;
+    background-color:  hsl(244, 38%, 16%);
+}
+@media (max-width:767px)
+{
+    .card{
+        width:340px;
+        flex-direction: column;
+        transform: translateY(0);
+        margin-top:20px;
+        margin-bottom:20px;
+        border-radius: 10px;
+    }
+}
+/* End Global Rules */
+/* Start Image */
+.card .image{
+    width:45%;
+    height:auto;
+    border-radius: 0 3px 3px 0;
+
+}
+ .card .image img{
+    width:100%;
+    height:100%;
+    border-radius: 0 3px 3px 0;
+} 
+@media (max-width:767px){
+    .card .image{
+        order:-1;
+        width:100%;
+        height: 260px;
+
+    }
+    .card .image img{
+        border-radius: 10px 10px 0 0;
+    }
+}
+/* End Image */
+/* Start Content */
+.content{
+    display: flex;
+    width:53%;
+}
+.content .container{
+    width:75%;
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+}
+.content .text{
+    font-family: Inter , sans-serif;
+}
+.content .text h1{
+    font-size: 30px;
+    color:white;
+    padding-bottom:20px;
+    margin: 50px 0 15px ;
+}
+.content .text h1 span{
+    color:hsl(277, 64%, 61%);
+    font-size: 30px;
+}
+.content .text p{
+    color:hsla(0, 0%, 100%, 0.75);
+    line-height: 1.6;
+}
+.content .stat{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(100px ,1fr));
+    margin-top:30px;
+    margin-bottom:30px;
+}
+.content .stat .info{
+    font-family: Inter , sans-serif;
+}
+.content .stat .info h2{
+    font-weight: 700;
+    color:white;
+    margin-bottom: 5px;
+}
+.content .stat .info p{
+    text-transform: uppercase;
+    color:hsla(0, 0%, 100%, 0.6);
+    font-size:11px
+}
+@media (max-width:767px){
+    .content{
+        width:100%;
+        text-align: center;
+    }
+    .content .stat .info{
+        margin-top:40px;
+    }
+    .content .stat{
+      display: initial;
+      
+    }
+    .content .stat h2{
+        font-size:20px;
+    }
+}
+/* End Content */
